@@ -170,6 +170,12 @@
       {% endif %}
     {% endblock %}
 
+    {# Bug 1352821: Add additional analytics tool to www.mozilla.org pages for a one-off experiment #}
+    {% block stat_counter %}
+      {% javascript 'stat_counter' %}
+      {% include 'includes/stat_counter.html' %}
+    {% endblock %}
+
     {% if settings.DEV %}
       <!--[if !lte IE 8]><!-->
         <script src="https://pontoon.mozilla.org/pontoon.js"></script>

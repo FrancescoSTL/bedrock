@@ -1222,6 +1222,7 @@ CSP_DEFAULT_SRC = (
 CSP_IMG_SRC = CSP_DEFAULT_SRC + (
     'data:',
     '*.optimizely.com',
+    '*.statcounter.com',
     'www.googletagmanager.com',
     'www.google-analytics.com',
     '*.tiles.mapbox.com',
@@ -1236,6 +1237,7 @@ CSP_SCRIPT_SRC = CSP_DEFAULT_SRC + (
     "'unsafe-eval'",
     '*.optimizely.com',
     'optimizely.s3.amazonaws.com',
+    'www.statcounter.com',
     'www.googletagmanager.com',
     'www.google-analytics.com',
     'tagmanager.google.com',
