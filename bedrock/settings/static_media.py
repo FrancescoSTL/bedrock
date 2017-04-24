@@ -526,6 +526,22 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'css/firefox_new_way_of_the_fox-bundle.css',
     },
+    'firefox_new_private_not_option': {
+        'source_filenames': (
+            'css/newsletter/fxnewsletter-subscribe.less',
+            'css/firefox/family-nav.less',
+            'css/firefox/new/private-not-option.less',
+        ),
+        'output_filename': 'css/firefox_new_private-not-option-bundle.css',
+    },
+    'firefox_new_conformity_not_default': {
+        'source_filenames': (
+            'css/newsletter/fxnewsletter-subscribe.less',
+            'css/firefox/family-nav.less',
+            'css/firefox/new/conformity-not-default.less',
+        ),
+        'output_filename': 'css/firefox_new_private-not-option-bundle.css',
+    },
     'firefox_new_onboarding_common': {
         'source_filenames': (
             'css/sandstone/sandstone-resp.less',
