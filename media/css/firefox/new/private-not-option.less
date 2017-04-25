@@ -215,7 +215,7 @@ h3 {
 
     @media only screen and (max-width: @breakMobileLandscape) {
         .content {
-            background-image: url('/media/img/firefox/family/index-b/intro.png');
+            background-image: url('/media/img/firefox/new/private-not-option/intro.png');
             background-size: 300px 261px;
             padding-bottom: 320px;
         }
@@ -229,8 +229,24 @@ h3 {
 #private-browsing .content {
     .at2x('/media/img/firefox/new/private-not-option/private-browsing.png', 256px, 266px);
     .common-mobile-props(316px);
-    background-position: top right 20px;
+    background-position: top left 20px;
     min-height: 266px;
+
+    .copy {
+        float: right;
+    }
+}
+
+#private-mobile .content {
+    .at2x('/media/img/firefox/new/private-not-option/private-mobile.png', 400px, 317px);
+    .common-mobile-props(288px);
+    background-position: top right 20px;
+    min-height: 314px;
+
+    @media only screen and (max-width: @breakDesktop) {
+        .background-size(300px 238px);
+        min-height: 238px;
+    }
 }
 
 #forget-button .content {
@@ -245,18 +261,6 @@ h3 {
 
     @media only screen and (max-width: @breakDesktop) {
         .background-size(300px 182px);
-    }
-}
-
-#private-mobile .content {
-    .at2x('/media/img/firefox/new/private-not-option/private-mobile.png', 400px, 317px);
-    .common-mobile-props(288px);
-    background-position: top right 20px;
-    min-height: 314px;
-
-    @media only screen and (max-width: @breakDesktop) {
-        .background-size(300px 238px);
-        min-height: 238px;
     }
 }
 
@@ -295,8 +299,7 @@ h3 {
 }
 
 #private-browsing,
-#forget-button,
-#today {
+#forget-button {
     background: @grey;
 }
 

@@ -542,6 +542,14 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'css/firefox_new_private-not-option-bundle.css',
     },
+    'firefox_new_browse_up_to_you': {
+        'source_filenames': (
+            'css/newsletter/fxnewsletter-subscribe.less',
+            'css/firefox/family-nav.less',
+            'css/firefox/new/browse-up-to-you.less',
+        ),
+        'output_filename': 'css/firefox_new_browse-up-to-you.css',
+    },
     'firefox_new_onboarding_common': {
         'source_filenames': (
             'css/sandstone/sandstone-resp.less',

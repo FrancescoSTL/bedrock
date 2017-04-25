@@ -2,111 +2,60 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% from "macros.html" import fxfamilynav with context %}
-
-{% extends "firefox/base-resp.html" %}
-
-{% block experiments %}
-  {% if switch('experiment-firefox-family', ['en-US']) %}
-    {% javascript 'experiment_firefox_family' %}
-  {% endif %}
-{% endblock %}
-
-{% block page_title_prefix %}{% endblock %}
-{% block page_title %}{{_('Free Web Browser for Android, iOS, Desktop | Firefox')}}{% endblock %}
-{% block page_desc %}{{_('Millions of people around the world trust Firefox Web browsers on Android, iOS and desktop computers. Fast. Private. Download now!')}}{% endblock %}
+{% extends "firefox/new/fx-lifestyle-base.html" %}
 
 {% block page_css %}
   {% stylesheet 'firefox_new_private_not_option' %}
 {% endblock %}
 
-{% block body_id %}firefox{% endblock %}
-{% block body_class %}{% endblock %}
-
-{% block site_header %}{% endblock %}
-
-{% block site_header_unwrapped %}
-  {% call fxfamilynav('firefox') %}
-    {{ download_firefox(dom_id="sticky-download-desktop", alt_copy=_('Download')) }}
-  {% endcall %}
+{% block head_content %}
+  <h2>
+    Privacy is more than an option and never optional
+  </h2>
+  
+  <p>
+   So you can browse, bank, and binge-watch without sacrificing your privacy.
+  </p>
 {% endblock %}
 
-{% block content %}
+{% block content_1 %}
+  <section class="content-section" id="private-browsing">
+    <div class="content">
+      <div class="copy">
+        <h3>True <a href="https://www.mozilla.org/firefox/private-browsing/">Privacy</a></h3>
 
-<section class="content-section" id="intro">
-  <div class="content">
-    <h2>
-      Privacy is more than an option and never optional
-    </h2>
-    <p>
-     So you can browse, bank, and binge-watch without sacrificing your privacy.
-    </p>
-
-    {{ download_firefox(dom_id="download-firefox") }}
-  </div>
-</section>
-
-<section class="content-section" id="private-browsing">
-  <div class="content">
-    <div class="copy">
-      <h3>True <a href="https://www.mozilla.org/firefox/private-browsing/">Privacy</a></h3>
-
-      <p>
-        Unlike other browsers, Firefox’s Private Browsing includes tracking protection which blocks all those pesky trackers that lurk without your knowledge collecting your browsing activity. Only on Firefox
-      </p>
+        <p>
+          Unlike other browsers, Firefox’s Private Browsing includes tracking protection which blocks all those pesky trackers that lurk without your knowledge collecting your browsing activity. Only on Firefox
+        </p>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="content-section" id="private-mobile">
-  <div class="content">
-    <div class="copy">
-      <h3>Private on mobile</h3>
-
-      <p>
-        <a target="_blank" href="https://itunes.apple.com/us/app/firefox-focus-the-privacy-browser/id1055677337?mt=8">Firefox Focus</a> is the privacy browser for iPhone and iPad that automatically blocks trackers, ads, and clears all search evidence from your device in a single tap.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="content-section" id="forget-button">
-  <div class="content">
-    <div class="copy">
-      <h3>One click Forget</h3>
-
-      <p>
-        Sometimes you don’t your browsing history needs to stay off the record. Firefox’s Forget Button lets you wipe it clean instantly. Only on Firefox
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="content-section" id="today">
-  <div class="content">
-    <h3>{{ _('Get Firefox today.') }}</h3>
-
-    {{ download_firefox(dom_id="download-firefox-today") }}
-  </div>
-</section>
-
+  </section>
 {% endblock %}
 
-{% block email_form %}
-  <aside id="newsletter-subscribe">
-    <div class="content container">
-      {# L10n: Line break for visual formatting. #}
-      {{ email_newsletter_form(title=_('Keep up with<br> all things Firefox.'), button_class='button-light') }}
+{% block content_2 %}
+  <section class="content-section" id="private-mobile">
+    <div class="content">
+      <div class="copy">
+        <h3>Private on mobile</h3>
+
+        <p>
+          <a target="_blank" href="https://itunes.apple.com/us/app/firefox-focus-the-privacy-browser/id1055677337?mt=8">Firefox Focus</a> is the privacy browser for iPhone and iPad that automatically blocks trackers, ads, and clears all search evidence from your device in a single tap.
+        </p>
+      </div>
     </div>
-  </aside>
+  </section>
 {% endblock %}
 
-{% block site_footer %}
-  {% with footer_class='dark' %}
-    {% include 'includes/site-footer-new.html' %}
-  {% endwith %}
-{% endblock %}
+{% block content_3 %}
+  <section class="content-section" id="forget-button">
+    <div class="content">
+      <div class="copy">
+        <h3>One click Forget</h3>
 
-{% block js %}
-  {% javascript 'firefox_family_index_b' %}
+        <p>
+          Sometimes you don’t your browsing history needs to stay off the record. Firefox’s Forget Button lets you wipe it clean instantly. Only on Firefox
+        </p>
+      </div>
+    </div>
+  </section>
 {% endblock %}
