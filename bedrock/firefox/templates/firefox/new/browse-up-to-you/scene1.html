@@ -5,6 +5,7 @@
 {% extends "firefox/new/fx-lifestyle-base.html" %}
 
 {% block page_css %}
+  {{ super() }}
   {% stylesheet 'firefox_new_browse_up_to_you' %}
 {% endblock %}
 
@@ -19,45 +20,26 @@
 {% endblock %}
 
 {% block content_1 %}
-  <section class="content-section" id="add-on">
-    <div class="content">
-      <div class="copy">
-        <h3>Add-on what you need, skip what you don’t</h3>
+  <h3>Add-on what you need, skip what you don’t</h3>
 
-        <p>
-          Ad blockers, video downloaders, password managers... Firefox gives you thousands of the tools to explore the web your way. Check out our featured <a href="https://addons.mozilla.org/en-US/firefox/" target="_blank">add-ons</a>.
-        </p>
-      </div>
-    </div>
-  </section>
+  <p>
+    Ad blockers, video downloaders, password managers... Firefox gives you thousands of the tools to explore the web your way. Check out our featured <a href="https://addons.mozilla.org/en-US/firefox/" target="_blank">add-ons</a>.
+  </p>
 {% endblock %}
 
 {% block content_2 %}
-  <section class="content-section" id="theme">
-    <div class="content">
-      <div class="copy">
-        <h3>Make it your own</h3>
+  <h3>Make it your own</h3>
 
-        <p>
-          Customize Firefox with a design that fits your style. Create your own or try on a pre-made <a href="https://addons.mozilla.org/en-US/firefox/themes/" target="_blank">theme</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-  
+  <p>
+    Customize Firefox with a design that fits your style. Create your own or try on a pre-made <a href="https://addons.mozilla.org/en-US/firefox/themes/" target="_blank">theme</a>.
+  </p>
 {% endblock %}
 
 {% block content_3 %}
-  <section class="content-section" id="everywhere">
-    <div class="content">
-      <div class="copy">
-        <h3>Take your show on the road</h3>
+  <h3>Take your show on the roadt</h3>
 
-        <p>
-          Switching to your phone doesn’t mean you have to give up choice. Get Firefox on your phone and tablet and access your tabs, bookmarks and logins on the road.
-        </p>  
-      </div>
-    </div>
-  </section>
+  <p>
+    Switching to your phone doesn’t mean you have to give up choice. Get Firefox on your phone and tablet and access your tabs, bookmarks and logins on the road.
+  </p>
 {% endblock %}
 

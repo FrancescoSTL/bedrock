@@ -5,6 +5,7 @@
 {% extends "firefox/new/fx-lifestyle-base.html" %}
 
 {% block page_css %}
+  {{ super() }}
   {% stylesheet 'firefox_new_private_not_option' %}
 {% endblock %}
 
@@ -19,43 +20,25 @@
 {% endblock %}
 
 {% block content_1 %}
-  <section class="content-section" id="private-browsing">
-    <div class="content">
-      <div class="copy">
-        <h3>True <a href="https://www.mozilla.org/firefox/private-browsing/">Privacy</a></h3>
+  <h3>True <a href="https://www.mozilla.org/firefox/private-browsing/">Privacy</a></h3>
 
-        <p>
-          Unlike other browsers, Firefox’s Private Browsing includes tracking protection which blocks all those pesky trackers that lurk without your knowledge collecting your browsing activity. Only on Firefox
-        </p>
-      </div>
-    </div>
-  </section>
+  <p>
+    Unlike other browsers, Firefox’s Private Browsing includes tracking protection which blocks all those pesky trackers that lurk without your knowledge collecting your browsing activity. Only on Firefox
+  </p>
 {% endblock %}
 
 {% block content_2 %}
-  <section class="content-section" id="private-mobile">
-    <div class="content">
-      <div class="copy">
-        <h3>Private on mobile</h3>
+  <h3>Private on mobile</h3>
 
-        <p>
-          <a target="_blank" href="https://itunes.apple.com/us/app/firefox-focus-the-privacy-browser/id1055677337?mt=8">Firefox Focus</a> is the privacy browser for iPhone and iPad that automatically blocks trackers, ads, and clears all search evidence from your device in a single tap.
-        </p>
-      </div>
-    </div>
-  </section>
+  <p>
+    <a target="_blank" href="https://itunes.apple.com/us/app/firefox-focus-the-privacy-browser/id1055677337?mt=8">Firefox Focus</a> is the privacy browser for iPhone and iPad that automatically blocks trackers, ads, and clears all search evidence from your device in a single tap.
+  </p>
 {% endblock %}
 
 {% block content_3 %}
-  <section class="content-section" id="forget-button">
-    <div class="content">
-      <div class="copy">
-        <h3>One click Forget</h3>
+  <h3>One click Forget</h3>
 
-        <p>
-          Sometimes you don’t your browsing history needs to stay off the record. Firefox’s Forget Button lets you wipe it clean instantly. Only on Firefox
-        </p>
-      </div>
-    </div>
-  </section>
+  <p>
+    Sometimes you don’t your browsing history needs to stay off the record. Firefox’s Forget Button lets you wipe it clean instantly. Only on Firefox
+  </p>
 {% endblock %}

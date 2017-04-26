@@ -2,108 +2,39 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% from "macros.html" import fxfamilynav with context %}
-
-{% extends "firefox/base-resp.html" %}
-
-{% block experiments %}
-  {% if switch('experiment-firefox-family', ['en-US']) %}
-    {% javascript 'experiment_firefox_family' %}
-  {% endif %}
-{% endblock %}
-
-{% block page_title_prefix %}{% endblock %}
-{% block page_title %}{{_('Free Web Browser for Android, iOS, Desktop | Firefox')}}{% endblock %}
-{% block page_desc %}{{_('Millions of people around the world trust Firefox Web browsers on Android, iOS and desktop computers. Fast. Private. Download now!')}}{% endblock %}
+{% extends "firefox/new/fx-lifestyle-base.html" %}
 
 {% block page_css %}
+  {{ super() }}
   {% stylesheet 'firefox_new_conformity_not_default' %}
 {% endblock %}
 
-{% block body_id %}firefox{% endblock %}
-{% block body_class %}{% endblock %}
-
-{% block site_header %}{% endblock %}
-
-{% block site_header_unwrapped %}
-  {% call fxfamilynav('firefox') %}
-    {{ download_firefox(dom_id="sticky-download-desktop", alt_copy=_('Download')) }}
-  {% endcall %}
+{% block head_content %}
+  <h2>
+    Non-profit. Non-corporate. Non-conformist.
+  </h2>
 {% endblock %}
 
-{% block content %}
+{% block content_1 %}
+  <h3>Add-on what you need, skip what you don’t</h3>
 
-<section class="content-section" id="intro">
-  <div class="content">
-    <h2>
-      Non-profit. Non-corporate. Non-conformist.
-    </h2>
-
-    {{ download_firefox(dom_id="download-firefox") }}
-  </div>
-</section>
-
-<section class="content-section" id="add-on">
-  <div class="content">
-    <div class="copy">
-      <h3>Add-on what you need, skip what you don’t</h3>
-
-      <p>
-        Ad blockers, video downloaders, password managers... Firefox gives you thousands of the tools to explore the web your way. Check out our featured <a href="https://addons.mozilla.org/en-US/firefox/" target="_blank">add-ons</a>.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="content-section" id="theme">
-  <div class="content">
-    <div class="copy">
-      <h3>Make it your own</h3>
-
-      <p>
-        Customize Firefox with a design that fits your style. Create your own or try on a pre-made <a href="https://addons.mozilla.org/en-US/firefox/themes/" target="_blank">theme</a>.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="content-section" id="non-profit">
-  <div class="content">
-    <div class="copy">
-      <h3>Backed by a nonprofit</h3>
-
-      <p>
-        We do things a bit differently when our motivations are clear: we respect people’s identity and data across the internet.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="content-section" id="today">
-  <div class="content">
-    <h3>{{ _('Get Firefox today.') }}</h3>
-
-    {{ download_firefox(dom_id="download-firefox-today") }}
-  </div>
-</section>
-
+  <p>
+    Ad blockers, video downloaders, password managers... Firefox gives you thousands of the tools to explore the web your way. Check out our featured <a href="https://addons.mozilla.org/en-US/firefox/" target="_blank">add-ons</a>.
+  </p>
 {% endblock %}
 
-{% block email_form %}
-  <aside id="newsletter-subscribe">
-    <div class="content container">
-      {# L10n: Line break for visual formatting. #}
-      {{ email_newsletter_form(title=_('Keep up with<br> all things Firefox.'), button_class='button-light') }}
-    </div>
-  </aside>
+{% block content_2 %}
+  <h3>Make it your own</h3>
+
+  <p>
+    Customize Firefox with a design that fits your style. Create your own or try on a pre-made <a href="https://addons.mozilla.org/en-US/firefox/themes/" target="_blank">theme</a>.
+  </p>
 {% endblock %}
 
-{% block site_footer %}
-  {% with footer_class='dark' %}
-    {% include 'includes/site-footer-new.html' %}
-  {% endwith %}
-{% endblock %}
+{% block content_3 %}
+  <h3>Backed by a nonprofit</h3>
 
-{% block js %}
-  {% javascript 'firefox_family_index_b' %}
+  <p>
+    We do things a bit differently when our motivations are clear: we respect people’s identity and data across the internet.
+  </p>
 {% endblock %}
