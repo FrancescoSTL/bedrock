@@ -538,19 +538,19 @@ PIPELINE_CSS = {
         'source_filenames': (
             'css/firefox/new/private-not-option.less',
         ),
-        'output_filename': 'css/firefox_new_private-not-option-bundle.css',
+        'output_filename': 'css/firefox_new_private_not_option_bundle.css',
     },
     'firefox_new_conformity_not_default': {
         'source_filenames': (
             'css/firefox/new/conformity-not-default.less',
         ),
-        'output_filename': 'css/firefox_new_private-not-option-bundle.css',
+        'output_filename': 'css/firefox_new_private_not_option_bundle.css',
     },
     'firefox_new_browse_up_to_you': {
         'source_filenames': (
             'css/firefox/new/browse-up-to-you.less',
         ),
-        'output_filename': 'css/firefox_new_browse-up-to-you.css',
+        'output_filename': 'css/firefox_new_browse_up_to_you.css',
     },
     'firefox_new_onboarding_common': {
         'source_filenames': (
