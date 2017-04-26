@@ -18,8 +18,53 @@
     }
 }
 
+#intro {
+    .content {
+        .at2x('/media/img/firefox/new/browse-up-to-you/intro.png', 632px, 550px);
+    }
+
+     @media only screen and (max-width: @breakDesktop) {
+        p {
+            .font-size(22px);
+        }
+    }
+
+    @media only screen and (max-width: @breakTablet) {
+        .content {
+            .background-size(400px 348px);
+            padding-bottom: 390px;
+        }
+
+        p {
+            .font-size(18px);
+            line-height: 1.6;
+            margin-bottom: 40px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: @breakMobileLandscape) {
+        .content {
+            background-image: url('/media/img/firefox/new/browse-up-to-you/intro.png');
+            background-size: 300px 261px;
+            padding-bottom: 320px;
+        }
+
+        p {
+            .font-size(16px);
+        }
+    }
+}
+
 #content-1 .content {
     .at2x('/media/img/firefox/new/browse-up-to-you/add-on.png', 400px, 317px);
+
+    @media only screen and (max-width: @breakDesktop) {
+        .background-size(300px 182px);
+    }
 }
 
 #content-2 .content {
@@ -28,4 +73,8 @@
 
 #content-3 .content {
     .at2x('/media/img/firefox/new/browse-up-to-you/everywhere.png', 400px, 243px);
+
+    @media only screen and (max-width: @breakDesktop) {
+        .background-size(300px 182px);
+    }
 }
